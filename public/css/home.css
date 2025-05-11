@@ -1,0 +1,39 @@
+/* public/css/home.css */
+
+.content {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.labs-projects {
+    flex: 2;
+}
+
+.lab-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.lab {
+    background-color: #f0f0f0;
+    padding: 1rem;
+    border-left: 4px solid #003366;
+    border-radius: 5px;
+}
+
+.sidebar {
+    flex: 1;
+    background-color: #e6e6e6;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.sidebar-section {
+    margin-bottom: 2rem;
+}
+
+.sidebar-section h3 {
+    margin-top: 0;
+}

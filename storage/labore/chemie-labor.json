@@ -1,0 +1,18 @@
+{
+    "name": "Chemie Labor",
+    "raum": "G 2.12",
+    "verantwortliche": ["Prof. Hoffmann"],
+    "projekte": ["Organische Synthese", "Materialchemie"],
+    "stellenangebote": ["Hiwi für Laboranalytik", "Praktikum in organischer Chemie"],
+    "news": [
+        {
+            "titel": "Neues Spektrometer angeschafft",
+            "inhalt": "Unser Chemie Labor wurde mit einem hochmodernen NMR-Spektrometer ausgestattet."
+        },
+        {
+            "titel": "Forschungspreis gewonnen",
+            "inhalt": "Das Team hat den Preis für innovative Forschung in der Materialchemie erhalten."
+        }
+    ],
+    "feedback": "Sehr gute Betreuung und spannende Projekte, besonders im Bereich der angewandten Chemie."
+}

@@ -1,0 +1,10 @@
+{
+    "profil": {
+        "name": "student",
+        "email": "student@st.de",
+        "studiengang": "informatik",
+        "semester": "6",
+        "avatar": "student.png"
+    },
+    "fertig": true
+}

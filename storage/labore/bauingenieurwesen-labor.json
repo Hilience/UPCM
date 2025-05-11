@@ -1,0 +1,14 @@
+{
+    "name": "Bauingenieurwesen Labor",
+    "raum": "E 1.05",
+    "verantwortliche": ["Prof. Krüger"],
+    "projekte": ["Brückenbau Modelle", "Betonfestigkeitstests"],
+    "stellenangebote": ["Hiwi für Materialprüfung"],
+    "news": [
+        {
+            "titel": "Forschung zu nachhaltigem Beton",
+            "inhalt": "Unser Labor arbeitet aktuell an umweltfreundlichen Betonalternativen."
+        }
+    ],
+    "feedback": "Stark praxisorientiert und mit engen Industriekontakten."
+}

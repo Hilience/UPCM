@@ -8,7 +8,7 @@ class ProfessorenController extends Controller
 {
     public function profs()
     {
-        $path = storage_path('profile/users.json');
+        $path = storage_path('app/profile/users.json');
         $usersJson = file_get_contents($path);
         $users = json_decode($usersJson, true);
 
@@ -16,7 +16,7 @@ class ProfessorenController extends Controller
 
         foreach ($users as $user) {
             if ($user['rolle'] === 'Prof') {
-                $profilPfad = storage_path("profile/profil_{$user['kennung']}.json");
+                $profilPfad = storage_path("app/profile/profil_{$user['kennung']}.json");
 
                 if (file_exists($profilPfad)) {
                     $profilJson = file_get_contents($profilPfad);

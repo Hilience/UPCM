@@ -16,7 +16,7 @@ class AuthController extends Controller
         $kennung = trim($request->input('kennung'));
         $password = trim($request->input('password'));
 
-        $path = storage_path('profile/users.json');
+        $path = storage_path('app/profile/users.json');
         if (file_exists($path)) {
             $usersJson = file_get_contents($path);
             $users = json_decode($usersJson, true);

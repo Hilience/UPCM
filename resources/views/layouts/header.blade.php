@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="{{ asset('css/professoren.css') }}">
     <link rel="stylesheet" href="{{ asset('css/profil.css') }}">
     <link rel="stylesheet" href="{{ asset('css/labore.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/kalender.css') }}">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
 <body>
 

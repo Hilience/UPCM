@@ -1,0 +1,375 @@
+/* ===========================
+   Kalender Navigation & Buttons
+   =========================== */
+.kalender-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.button-gruppe button {
+    background-color: #0055a5;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin-right: 0.5rem;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.button-gruppe button:hover {
+    background-color: #003f7d;
+}
+
+.btn-erstellen {
+    background-color: #28a745;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.btn-erstellen:hover {
+    background-color: #218838;
+}
+
+/* ===========================
+   Monat-Ansicht Kalender Grid
+   =========================== */
+.kalender-grid.monat {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.kalender-tag {
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    background-color: #f9f9f9;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 6px;
+}
+
+.kalender-tag.leer {
+    background-color: #f0f0f0;
+    border: none;
+}
+
+/* Tag Header (Datum) */
+.tag-header {
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+}
+
+/* ===========================
+   Wochenansicht Grid
+   =========================== */
+.wochenansicht-grid {
+    display: grid;
+    grid-template-columns: 80px repeat(7, 1fr);
+    grid-auto-rows: 40px;
+    gap: 1px;
+    background-color: #ccc;
+    width: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.wochentag-header,
+.zeit-spalte,
+.zeit-slot {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 0.2rem;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 0.85rem;
+    user-select: none;
+}
+
+.zeit-slot {
+    height: 40px;
+}
+
+/* ===========================
+   Modal Styles
+   =========================== */
+.modal.hidden{
+    display: none;
+}
+.modal.aktiv {
+    display: flex;
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.modal .modal-content {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    font-family: Arial, sans-serif;
+    position: relative;
+}
+
+/* Modal Titel */
+.modal h2 {
+    margin-top: 0;
+    color: #003366;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Formularelemente */
+.modal form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+    color: #003366;
+    font-size: 0.9rem;
+}
+
+.modal form input[type="text"],
+.modal form input[type="date"],
+.modal form input[type="time"],
+.modal form textarea,
+.modal form select {
+    width: 100%;
+    padding: 0.4rem 0.6rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: inherit;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+}
+
+.modal form input[type="text"]:focus,
+.modal form input[type="date"]:focus,
+.modal form input[type="time"]:focus,
+.modal form textarea:focus,
+.modal form select:focus {
+    outline: none;
+    border-color: #0055a5;
+}
+
+/* Kommentar Textarea */
+.modal form textarea {
+    resize: vertical;
+    min-height: 60px;
+}
+
+/* Farb-Auswahl Container */
+#farb-auswahl {
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+}
+
+#farb-auswahl div {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid transparent;
+    box-sizing: border-box;
+    transition: border-color 0.25s;
+}
+
+#farb-auswahl div:hover {
+    border-color: #0055a5;
+}
+
+#farb-auswahl div.aktiv {
+    border-color: #003366;
+}
+
+/* Buttons */
+.modal form button {
+    background-color: #003366;
+    border: none;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 0.8rem;
+    font-size: 1rem;
+    transition: background-color 0.25s;
+}
+
+.modal form button:hover {
+    background-color: #0055a5;
+}
+
+.modal form button[type="button"] {
+    background-color: #6c757d;
+}
+
+.modal form button[type="button"]:hover {
+    background-color: #5a6268;
+}
+
+/* ===========================
+   Löschen-Button im Modal
+   =========================== */
+#btn-loeschen {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: auto;
+    transition: background-color 0.3s ease;
+}
+
+#btn-loeschen:hover {
+    background-color: #b02a37;
+}
+
+/* ===========================
+   Toast Nachricht
+   =========================== */
+#toast {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #28a745;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease-in-out;
+    z-index: 9999;
+    font-weight: bold;
+}
+
+/* ===========================
+   Termin Einträge Styles
+   =========================== */
+.termin-klein {
+    padding: 2px 4px;
+    margin: 2px 0;
+    font-size: 0.75rem;
+    color: white;
+    border-radius: 3px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.termin-breit {
+    padding: 4px;
+    font-size: 0.85rem;
+    color: white;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+/* ===========================
+   Lösch-Bestätigung Modal
+   =========================== */
+#loeschen-bestätigung-modal.hidden {
+    display: none;
+}
+
+#loeschen-bestätigung-modal.aktiv, /* oder .visible, .show, je nach JS */
+#loeschen-bestätigung-modal:not(.hidden) {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+#loeschen-bestätigung-modal > div {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 320px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+#loeschen-bestätigung-modal button {
+    margin: 0 5px;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    border: none;
+    background-color: #dc3545;
+    color: white;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+#loeschen-bestätigung-modal button:hover {
+    background-color: #b02a37;
+}
+
+#loeschen-bestätigung-modal button#btn-abbrechen-loeschen {
+    background-color: #6c757d;
+}
+
+#loeschen-bestätigung-modal button#btn-abbrechen-loeschen:hover {
+    background-color: #5a6268;
+}
+
+#farb-auswahl {
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+}
+
+#farb-auswahl div {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid transparent;
+    box-sizing: border-box;
+    transition: border-color 0.25s;
+}
+
+#farb-auswahl div:hover {
+    border-color: #0055a5;
+}
+
+#farb-auswahl div.aktiv {
+    border-color: #003366;
+}

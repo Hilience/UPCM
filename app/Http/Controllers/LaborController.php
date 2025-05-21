@@ -9,7 +9,7 @@ class LaborController extends Controller
 {
     public function liste()
     {
-        $laborPfad = storage_path('labore');
+        $laborPfad = storage_path('app/labore');
         $laborDateien = glob($laborPfad . '/*.json');
 
         $labore = [];

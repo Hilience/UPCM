@@ -97,7 +97,7 @@ class ProfilController extends Controller
         }
 
         // Speichern als JSON
-        $profilPfad = storage_path("profile/profil_{$kennung}.json");
+        $profilPfad = storage_path("app/profile/profil_{$kennung}.json");
         file_put_contents($profilPfad, json_encode([
             'profil' => $daten,
             'fertig' => $alleFelderAusgefuellt
@@ -108,7 +108,7 @@ class ProfilController extends Controller
 
     private function ladeProfil($kennung, $rolle)
     {
-        $profilPfad = storage_path("profile/profil_{$kennung}.json");
+        $profilPfad = storage_path("app/profile/profil_{$kennung}.json");
 
         if (!file_exists($profilPfad)) {
             // Leeres Profil anlegen

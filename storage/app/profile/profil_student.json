@@ -1,0 +1,23 @@
+{
+    "profil": {
+        "name": "student",
+        "email": "student@st.de",
+        "studiengang": "informatik",
+        "semester": "6",
+        "avatar": "student.png"
+    },
+    "termine": [
+        {
+            "id": "4b4811b0-cde5-4769-ba3c-bebba2a933f6",
+            "titel": "Termin 1",
+            "datum": "2025-05-12",
+            "von": "10:51",
+            "bis": "12:51",
+            "kommentar": null,
+            "wiederholung": "taeglich",
+            "enddatum": "2025-05-19",
+            "farbe": "#007bff"
+        }
+    ],
+    "fertig": true
+}

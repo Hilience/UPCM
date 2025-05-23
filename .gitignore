@@ -3,23 +3,29 @@
 /public/build
 /public/hot
 
-# Schlüsseldateien im storage ignorieren
-/storage/*.key
+# Ignoriere alle Dateien im storage außer JSON-Dateien in labore und profile
 
-# Speicherordner, die komplett ignoriert werden sollen
+/storage/*.key
 /storage/pail
 
-# Ordner labore - Ordner behalten, aber nur bestimmte Dateien erlauben
-!storage/app/labore/
-storage/app/labore/*
-!storage/app/labore/.gitkeep
-!storage/app/labore/deinedatei.xyz
+# Ignoriere alles im labore Ordner
+/storage/app/labore/*
 
-# Ordner profile - Ordner behalten, aber nur bestimmte Dateien erlauben
-!storage/app/profile/
-storage/app/profile/*
+# Aber nicht JSON-Dateien im labore Ordner
+!storage/app/labore/*.json
+
+# Und auch nicht .gitkeep, falls vorhanden
+!storage/app/labore/.gitkeep
+
+
+# Ignoriere alles im profile Ordner
+/storage/app/profile/*
+
+# Aber nicht JSON-Dateien im profile Ordner
+!storage/app/profile/*.json
+
+# Und auch hier .gitkeep nicht ignorieren
 !storage/app/profile/.gitkeep
-!storage/app/profile/deinedatei.xyz
 
 /vendor
 .env.backup

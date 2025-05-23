@@ -1,0 +1,32 @@
+[
+    {
+        "kennung": "prof",
+        "password": "prof",
+        "rolle": "Prof"
+    },
+    {
+        "kennung": "1111",
+        "password": "prof",
+        "rolle": "Prof"
+    },
+    {
+        "kennung": "2222",
+        "password": "prof",
+        "rolle": "Prof"
+    },
+    {
+        "kennung": "3333",
+        "password": "prof",
+        "rolle": "Prof"
+    },
+    {
+        "kennung": "4444",
+        "password": "prof",
+        "rolle": "Prof"
+    },
+    {
+        "kennung": "student",
+        "password": "student",
+        "rolle": "Student"
+    }
+]

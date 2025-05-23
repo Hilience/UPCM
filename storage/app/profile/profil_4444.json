@@ -1,0 +1,10 @@
+{
+    "profil": {
+        "name": "Albert Einstein",
+        "email": "aEinstein@fh-aachen.de",
+        "buero": "E444",
+        "labore": ["Physic Labor"],
+        "avatar": ""
+    },
+    "fertig": true
+}

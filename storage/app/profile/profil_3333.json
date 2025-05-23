@@ -1,0 +1,10 @@
+{
+    "profil": {
+        "name": "Mark Zuckerberg",
+        "email": "mzuckerberg@fh-aachen.de",
+        "buero": "E333",
+        "labore": ["Labor 5", "Labor 6"],
+        "avatar": ""
+    },
+    "fertig": true
+}

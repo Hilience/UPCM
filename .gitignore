@@ -2,22 +2,40 @@
 /node_modules
 /public/build
 /public/hot
+
+# Schlüsseldateien im storage ignorieren
 /storage/*.key
+
+# Speicherordner, die komplett ignoriert werden sollen
 /storage/pail
+
+# Ordner labore - Ordner behalten, aber nur bestimmte Dateien erlauben
 !storage/app/labore/
-/storage/app/labore/*
-!/storage/app/labore/.gitkeep
-!/storage/app/labore/deinedatei.xyz
+storage/app/labore/*
+!storage/app/labore/.gitkeep
+!storage/app/labore/deinedatei.xyz
+
+# Ordner profile - Ordner behalten, aber nur bestimmte Dateien erlauben
+!storage/app/profile/
+storage/app/profile/*
+!storage/app/profile/.gitkeep
+!storage/app/profile/deinedatei.xyz
+
 /vendor
 .env.backup
 .env.production
+
 .phpactor.json
 .phpunit.result.cache
+
 Homestead.json
 Homestead.yaml
+
 npm-debug.log
 yarn-error.log
+
 /auth.json
+
 /.fleet
 /.idea
 /.nova

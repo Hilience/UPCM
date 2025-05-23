@@ -4,6 +4,10 @@
 /public/hot
 /storage/*.key
 /storage/pail
+!storage/app/labore/
+/storage/app/labore/*
+!/storage/app/labore/.gitkeep
+!/storage/app/labore/deinedatei.xyz
 /vendor
 .env.backup
 .env.production

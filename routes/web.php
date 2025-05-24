@@ -33,3 +33,7 @@ Route::post('/kalender/loeschen', [KalenderController::class, 'loescheTermin']);
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/suche', function () {
+    return view('suche');
+});

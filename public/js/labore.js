@@ -77,4 +77,18 @@ document.addEventListener("DOMContentLoaded", function() {
             showLaborProfile(name, raum, verantwortliche, projekte, stellen, news, feedback);
         });
     });
+
+    // Automatische Auswahl bei URL-Parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    const laborName = urlParams.get('name');
+
+    if (laborName) {
+        const decodedName = decodeURIComponent(laborName);
+        const targetButton = document.querySelector(`button[data-name='${decodedName}']`);
+
+        if (targetButton) {
+            targetButton.scrollIntoView({behavior: 'smooth', block: 'center'});
+            targetButton.click();
+        }
+    }
 });

@@ -28,7 +28,11 @@
                 @endif
             </ul>
             <ul class="menu-right">
-                <li><input type="text" placeholder="Suche..."></li>
+                <li>
+                    <form action="/suche" method="GET">
+                        <input type="text" name="eingabe" placeholder="Suche...">
+                    </form>
+                </li>
                 <li><a href="/profil">Profil</a></li>
                 <li><a href="{{ route('logout') }}">Logout</a></li>
             </ul>

@@ -81,4 +81,16 @@ document.addEventListener("DOMContentLoaded", function() {
             showProfile(kennung, name, email, buero, labore);
         });
     });
+
+    // Automatische Auswahl bei URL-Parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    const kennung = urlParams.get('kennung');
+
+    if (kennung) {
+        const targetButton = document.querySelector(`button[data-id='${kennung}']`);
+        if (targetButton) {
+            targetButton.scrollIntoView({behavior: 'smooth', block: 'center'});
+            targetButton.click();
+        }
+    }
 });
